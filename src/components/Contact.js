@@ -1,95 +1,67 @@
 import React from "react";
-import { Box } from "@mui/material";
 import { GitHub, LinkedIn, Twitter, Instagram, Facebook } from "@mui/icons-material";
 
 const Contact = () => {
   return (
-    <section style={{ padding: "40px 20px", backgroundColor: "#f7f7f7" }}>
-      <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-        <h2 style={{ fontWeight: "600", color: "#333" }}>Contact</h2>
+    <section className="py-16 bg-gradient-to-t from-gray-900 via-gray-800 to-gray-700 text-white">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-5xl font-semibold">Contact</h2>
+        <p className="mt-4 text-lg text-gray-300">
+          Feel free to connect with me on any of the platforms below!
+        </p>
 
         {/* Social Media Icons Section */}
-        <Box display="flex" justifyContent="center" marginTop="30px">
+        <div className="flex justify-center mt-8 space-x-8">
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/tharun-yetti-9775a0280/"
             target="_blank"
-            style={{
-              color: "#0077b5",
-              fontSize: "50px",
-              margin: "0 20px",
-              transition: "all 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#004d80")}
-            onMouseLeave={(e) => (e.target.style.color = "#0077b5")}
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:text-blue-700 transition-transform transform hover:scale-125"
           >
-            <LinkedIn />
+            <LinkedIn style={{ fontSize: "50px" }} />
           </a>
 
           {/* GitHub */}
           <a
             href="https://github.com/TharunYetti/"
             target="_blank"
-            style={{
-              color: "#333",
-              fontSize: "50px",
-              margin: "0 20px",
-              transition: "all 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#000")}
-            onMouseLeave={(e) => (e.target.style.color = "#333")}
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-gray-600 transition-transform transform hover:scale-125"
           >
-            <GitHub />
+            <GitHub style={{ fontSize: "50px" }} />
           </a>
 
           {/* Twitter */}
           <a
             href="https://twitter.com/your-username"
             target="_blank"
-            style={{
-              color: "#1DA1F2",
-              fontSize: "50px",
-              margin: "0 20px",
-              transition: "all 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#004a73")}
-            onMouseLeave={(e) => (e.target.style.color = "#1DA1F2")}
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-600 transition-transform transform hover:scale-125"
           >
-            <Twitter />
+            <Twitter style={{ fontSize: "50px" }} />
           </a>
 
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/your-username"
+            href="https://www.instagram.com/tharunyetti24"
             target="_blank"
-            style={{
-              color: "#e1306c",
-              fontSize: "50px",
-              margin: "0 20px",
-              transition: "all 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#9b1b44")}
-            onMouseLeave={(e) => (e.target.style.color = "#e1306c")}
+            rel="noopener noreferrer"
+            className="text-pink-500 hover:text-pink-700 transition-transform transform hover:scale-125"
           >
-            <Instagram />
+            <Instagram style={{ fontSize: "50px" }} />
           </a>
 
           {/* Facebook */}
           <a
             href="https://www.facebook.com/your-username"
             target="_blank"
-            style={{
-              color: "#1877F2",
-              fontSize: "50px",
-              margin: "0 20px",
-              transition: "all 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#004b87")}
-            onMouseLeave={(e) => (e.target.style.color = "#1877F2")}
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 transition-transform transform hover:scale-125"
           >
-            <Facebook />
+            <Facebook style={{ fontSize: "50px" }} />
           </a>
-        </Box>
+        </div>
       </div>
     </section>
   );

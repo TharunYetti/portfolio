@@ -9,7 +9,7 @@ const Home = () => {
           Hi, I'm Tharun Yetti
         </h1>
         <p className="mt-4 text-xl opacity-75 hover:opacity-100 transition-opacity duration-300">
-          A passionate full-stack developer
+          A passionate full-stack developer and an AI/ML enthusiast
         </p>
         <a href="#about" className="mt-8 inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:scale-110 transition-transform duration-300">
           Learn More About Me

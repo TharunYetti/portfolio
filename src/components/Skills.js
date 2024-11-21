@@ -52,9 +52,9 @@ const skills = {
 
 const Skills = () => {
   return (
-    <section className="py-16 px-4 bg-gradient-to-r from-indigo-200 to-blue-200">
+    <section className="py-16 px-4 bg-gradient-to-r from-purple-100 to-blue-200">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-5xl font-bold text-indigo-600">My Skills</h2>
+        <h2 className="text-5xl font-bold text-gray-800">My Skills</h2>
         <p className="mt-4 text-lg text-gray-600">
           A collection of technologies and tools I specialize in.
         </p>
