@@ -13,6 +13,12 @@ const Home = () => {
         </p>
         <a href="#about" className="mt-8 inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:scale-110 transition-transform duration-300">
           Learn More About Me
+        </a><br/>
+        <a href="#projects" className="mt-8 inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:scale-110 transition-transform duration-300">
+          View Projects
+        </a><br/>
+        <a href="#skills" className="mt-8 inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:scale-110 transition-transform duration-300">
+          View Skills
         </a>
       </div>
     </section>

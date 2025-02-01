@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="py-16 px-4 bg-gradient-to-r from-purple-100 to-blue-200">
+    <section id="about" className="py-16 px-4 bg-gradient-to-r from-purple-100 to-blue-200">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-5xl font-bold text-gray-800 mb-8">About Me</h2>
         <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">

@@ -46,13 +46,12 @@ const skills = {
   "Databases": [
     { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
     { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-indigo-500" /> },
   ],
 };
 
 const Skills = () => {
   return (
-    <section className="py-16 px-4 bg-gradient-to-r from-purple-100 to-blue-200">
+    <section id = "skills" className="py-16 px-4 bg-gradient-to-r from-purple-100 to-blue-200">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-5xl font-bold text-gray-800">My Skills</h2>
         <p className="mt-4 text-lg text-gray-600">
