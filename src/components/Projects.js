@@ -18,6 +18,11 @@ const projects = [
     link: "https://github.com/Student-Recreation-Center-CSE-RKV/HHO-API",
     link2: "https://github.com/Student-Recreation-Center-CSE-RKV/HHO-Client",
     image: "https://via.placeholder.com/300x200", // Replace with your image URL
+  },{
+    title: "Heart-Disease-Classification",
+    description: "Developed a classification ML model, which integrates three different approaches and provide a collective result up on whether the person has heart disease or not",
+    link: "https://github.com/TharunYetti/Heart-Disease-Classification-Using-ML",
+    image: "https://via.placeholder.com/300x200",
   },
   {
     title: "CS Connect",
