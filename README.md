@@ -20,47 +20,11 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - Tailwind CSS
 - Framer Motion (for animations)
 - React Icons
-
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser
-
-## Customization
-
-### Personal Information
-
-Update your personal information in each component file:
-
-- Edit the Hero section text in `src/sections/Hero.tsx`
-- Update your about information in `src/sections/About.tsx`
-- Add your own projects in `src/sections/Projects.tsx`
-- Update skills in `src/sections/Skills.tsx`
-- Add your own achievements in `src/sections/Achievements.tsx`
-- Update contact information in `src/sections/Contact.tsx`
-
-### Resume Files
-
-Replace the placeholder resume files in the `public/resumes/` directory with your own:
-
-- `technical_resume.pdf`
-- `creative_resume.pdf`
-- `academic_resume.pdf`
-
-### Profile Images
-
-Replace the placeholder images with your own photos in the `public/images/` directory.
-
-## Deployment
-
-This site can be easily deployed to platforms like Vercel, Netlify, or GitHub Pages.
-
+   
 ## License
 
 MIT
 
 ## Author
 
-Your Name
+Tharun Yetti
