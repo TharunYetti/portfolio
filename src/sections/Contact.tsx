@@ -11,7 +11,7 @@ const Contact = () => {
     { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/tharun.3014/' },
     { name: 'Email', icon: <FaEnvelope />, url: `mailto:${contactEmail}` },
     { name: 'Leetcode', icon: <FaCode />, url: 'https://leetcode.com/u/TharunY' },
-    { name: 'Hackerrank', icon: <FaTerminal/>, url: 'https://leetcode.com/u/TharunY' },
+    { name: 'Hackerrank', icon: <FaTerminal/>, url: 'https://www.hackerrank.com/profile/tharunyetti24' },
   ];
 
   // Form state

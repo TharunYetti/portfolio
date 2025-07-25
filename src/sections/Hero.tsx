@@ -75,7 +75,7 @@ const Hero = () => {
             {/* Image Container with Curved Shape */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-secondary/20">
               <img 
-                src="/images/image-1.jpg" 
+                src="images/image-1.jpg" 
                 alt="Profile" 
                 className="w-full h-full object-cover"
               />
