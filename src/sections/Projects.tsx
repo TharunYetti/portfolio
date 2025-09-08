@@ -15,15 +15,15 @@ interface Project {
 const Projects = () => {
   // Sample projects data (replace with your own)
   const projectsData: Project[] = [
-    {
-      title: 'Pharma-Coach',
-      description: 'An AI-Powered Application, offering AI Coaching for the sales representatives of the pharma company to train them well for the sales publishing. Integrated Livekit for real time AI voice response.',
-      image: 'images/pharma-coach.png',
-      technologies: ['React', 'FastAPI', 'MongoDB', 'Livekit', 'Gemini', 'TailwindCSS'],
-      github: 'https://pharma-dev.hitloop.com/',
-      demo: 'https://pharma-dev.hitloop.com/',
-      featured: true,
-    },
+    // {
+    //   title: 'Pharma-Coach',
+    //   description: 'An AI-Powered Application, offering AI Coaching for the sales representatives of the pharma company to train them well for the sales publishing. Integrated Livekit for real time AI voice response.',
+    //   image: 'images/pharma-coach.png',
+    //   technologies: ['React', 'FastAPI', 'MongoDB', 'Livekit', 'Gemini', 'TailwindCSS'],
+    //   github: 'https://pharma-dev.hitloop.com/',
+    //   demo: 'https://pharma-dev.hitloop.com/',
+    //   featured: true,
+    // },
     {
       title: 'Resume-Hub',
       description: 'An AI-Powered Application, offering ATS checking, job recommendations, and instant interview questions — all based on the users resume. Integrated GeminiAPI for advanced resume parsing and AI-driven features.',
@@ -67,7 +67,7 @@ const Projects = () => {
       technologies: ['React', 'Node', 'TypeScript','MongoDB','TailwindCSS'],
       github: 'https://github.com/TharunYetti/Team-13',
       demo: 'https://udis-client.vercel.app/',
-      featured: false,
+      featured: true,
     },
     {
       title: 'CS Connect',

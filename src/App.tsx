@@ -9,6 +9,7 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import { Toaster } from 'react-hot-toast';
+import Experience from './sections/Experience';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Projects />
         <Skills />
         <Achievements />
+        <Experience />
         <Contact />
       </main>
       <Footer />

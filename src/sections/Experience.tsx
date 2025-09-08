@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaAward, FaBrain, FaMedal} from 'react-icons/fa';
 // import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
-import { FaRankingStar } from 'react-icons/fa6';
-import { DiJava } from 'react-icons/di';
-import { TbSql } from 'react-icons/tb';
+import { DiJava, DiReact } from 'react-icons/di';
+import { BiLaptop } from 'react-icons/bi';
+import { BsMegaphone } from 'react-icons/bs';
 
 interface Achievement {
   id: number;
@@ -14,50 +13,36 @@ interface Achievement {
   icon: React.ReactNode;
 }
 
-const Achievements = () => {
+const Experience = () => {
   // Sample achievements (replace with your own)
-  const achievements: Achievement[] = [
+  const experiences: Achievement[] = [
     {
       id: 1,
-      title: 'AIR 6009 in GATE 2025',
+      title: 'Full Stack Developer - Hitloop',
       description: 'Secured an All India Rank of 6009 in GATE 2025 CS/IT Paper with an intense prepation of 10 days! proving my proficiency in this domain',
-      date: 'March 2025',
-      icon: <FaRankingStar className="text-4xl text-yellow-500" />,
+      date: 'July 2025 - Present',
+      icon: <DiReact className="text-4xl text-yellow-500" />,
     },
     {
       id: 2,
-      title: 'Hackathon Winner',
+      title: 'Technical Intern - MAANG Technologies Pvt. Ltd.',
       description: 'Secured First place in the Aadhya Hackathon 2.0 conducted at our campus.',
-      date: 'February 2025',
-      icon: <FaMedal className="text-4xl text-amber-500" />,
+      date: 'May 2024 - May 2025',
+      icon: <BiLaptop className="text-4xl text-amber-500" />,
     },
     {
       id: 3,
-      title: 'SQL Basic and Advanced Certification - Hackerrank',
+      title: 'Campus Ambassador - IGNITED MINDS ORGANISATION',
       description: 'Secured First place in the Aadhya Hackathon 2.0 conducted at our campus.',
-      date: 'February 2025',
-      icon: <TbSql className="text-4xl text-amber-500" />,
-    },
-    {
-      id: 4,
-      title: 'Java Basic Certification - Hackerrank',
-      description: 'Secured First place in the Aadhya Hackathon 2.0 conducted at our campus.',
-      date: 'February 2025',
-      icon: <DiJava className="text-4xl text-amber-500" />,
+      date: 'Nov 2023 - Dec 2023',
+      icon: <BsMegaphone className="text-4xl text-amber-500" />,
     },
     {
       id: 5,
-      title: 'Tech Quiz and SQL Contest Winner',
+      title: 'Java Developer - LetsGrowMore',
       description: 'Winner in the Tech Quiz and Runner Up in SQL Contest conducted in our college in Abhiyanth Technical Fest.',
-      date: 'February 2025',
-      icon: <FaBrain className="text-4xl text-blue-500" />,
-    },
-    {
-      id: 6,
-      title: 'Java Content Development',
-      description: 'Completed developing core java content for freshers that is being used in a company of my internship.',
-      date: 'December 2024',
-      icon: <FaAward className="text-4xl text-blue-500" />,
+      date: 'Sep 2023 - Oct 2023',
+      icon: <DiJava className="text-4xl text-blue-500" />,
     },
   ];
 
@@ -70,12 +55,12 @@ const Achievements = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        Achievements
+        Experience
       </motion.h2>
 
       {/* Achievements Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-        {achievements.map((achievement, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mt-16">
+        {experiences.map((achievement, index) => (
           <motion.div
             key={achievement.id}
             initial={{ opacity: 0, y: 30 }}
@@ -87,7 +72,7 @@ const Achievements = () => {
             <div className="flex-shrink-0">{achievement.icon}</div>
             <div>
               <h3 className="text-xl font-bold text-lightestSlate mb-2">{achievement.title}</h3>
-              <p className="text-lightSlate mb-3">{achievement.description}</p>
+              {/* <p className="text-lightSlate mb-3">{achievement.description}</p> */}
               <p className="text-secondary text-sm">{achievement.date}</p>
             </div>
           </motion.div>
@@ -178,4 +163,4 @@ const Achievements = () => {
   );
 };
 
-export default Achievements; 
+export default Experience; 
