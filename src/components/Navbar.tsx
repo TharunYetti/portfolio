@@ -77,7 +77,7 @@ const Navbar = () => {
             href="#hero" 
             className="text-2xl font-bold text-secondary"
           >
-            Portfolio
+            TharunYetti
           </a>
 
           {/* Desktop Navigation */}
