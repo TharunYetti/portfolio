@@ -10,11 +10,11 @@ const Navbar = () => {
 
   // Navigation links
   const navLinks = [
-    { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Achievements', href: '#achievements' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' },
   ];
 

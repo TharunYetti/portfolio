@@ -47,7 +47,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="achievements" className="section-container py-28 overflow-hidden">
+    <section id="experience" className="section-container py-28 overflow-hidden">
       <motion.h2
         className="section-title"
         initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ const Experience = () => {
       </motion.h2>
 
       {/* Achievements Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
         {experiences.map((achievement, index) => (
           <motion.div
             key={achievement.id}

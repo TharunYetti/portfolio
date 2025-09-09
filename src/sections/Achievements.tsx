@@ -74,7 +74,7 @@ const Achievements = () => {
       </motion.h2>
 
       {/* Achievements Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {achievements.map((achievement, index) => (
           <motion.div
             key={achievement.id}

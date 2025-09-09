@@ -2,9 +2,9 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Simple debounce utility
-const debounce = (func, wait) => {
-  let timeout;
-  return (...args) => {
+const debounce = (func: any, wait: any) => {
+  let timeout: any;
+  return (...args: any) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
@@ -36,12 +36,12 @@ const About = () => {
       { threshold: 0.4, rootMargin: '-20% 0px' }
     );
 
-    Object.values(sectionsRef.current).forEach((section) => {
+    Object.values(sectionsRef.current).forEach((section:any) => {
       if (section) observer.observe(section);
     });
 
     return () => {
-      Object.values(sectionsRef.current).forEach((section) => {
+      Object.values(sectionsRef.current).forEach((section: any) => {
         if (section) observer.unobserve(section);
       });
     };
@@ -93,41 +93,6 @@ Driven by curiosity, I continuously explore emerging technologies, from AI and m
         </motion.div>
       ),
     },
-    // {
-    //   id: 'topWork',
-    //   title: 'My Top Work',
-    //   content: (
-    //     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    //       {[
-    //         {
-    //           name: 'Document QA System',
-    //           description: 'An intelligent system for answering queries on documents using natural language processing.',
-    //         },
-    //         {
-    //           name: 'Deep Noise Suppression',
-    //           description: 'An audio filtering system designed to remove background noise with high precision.',
-    //         },
-    //         {
-    //           name: 'Examination Cell',
-    //           description: 'A streamlined system for automating certificate generation and management.',
-    //         },
-    //       ].map((project, i) => (
-    //         <motion.div
-    //           key={project.name}
-    //           className="p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
-    //           initial={{ opacity: 0, y: 20 }}
-    //           whileInView={{ opacity: 1, y: 0 }}
-    //           viewport={{ once: true }}
-    //           transition={{ delay: i * 0.1, duration: 0.5 }}
-    //           whileHover={{ y: -5 }}
-    //         >
-    //           <h3 className="text-lg font-semibold text-blue-400 mb-3">{project.name}</h3>
-    //           <p className="text-sm text-gray-400">{project.description}</p>
-    //         </motion.div>
-    //       ))}
-    //     </div>
-    //   ),
-    // },
     {
       id: 'skills',
       title: 'Domains & Skills',
