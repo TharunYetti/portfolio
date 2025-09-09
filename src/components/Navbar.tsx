@@ -20,9 +20,7 @@ const Navbar = () => {
 
   // Resume options
   const resumeOptions = [
-    { name: 'SDE Resume', file: '/resumes/TharunYetti.pdf' },
-    // { name: 'ML Resume', file: '/resumes/ml_resume.pdf' },
-    // { name: 'AI Resume', file: '/resumes/academic_resume.pdf' },
+    { name: 'SDE Resume', file: 'resumes/TharunYetti.pdf' },
   ];
 
   // Toggle mobile menu
