@@ -7,14 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0a192f",
-        secondary: "#64ffda",
-        lightSlate: "#a8b2d1",
-        lightestSlate: "#ccd6f6",
-        slate: "#8892b0",
-        navy: "#0a192f",
-        lightNavy: "#112240",
-        navyShadow: "rgba(2, 12, 27, 0.7)",
+        primary: "#f4f1eb",
+        secondary: "#ff6b4a",
+        coral: "#ff6b4a",
+        'coral-dark': "#d84d31",
+        paper: "#f4f1eb",
+        ink: "#17202a",
+        lightSlate: "#53606b",
+        lightestSlate: "#17202a",
+        slate: "#53606b",
+        navy: "#17202a",
+        lightNavy: "#e8e3da",
+        navyShadow: "rgba(23, 32, 42, 0.15)",
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in',
@@ -38,4 +42,4 @@ module.exports = {
     },
   },
   plugins: [],
-} 
+}

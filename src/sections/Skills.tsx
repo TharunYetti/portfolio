@@ -12,7 +12,7 @@ import {
   FaGithub,
 } from 'react-icons/fa';
 
-import { SiTypescript, SiJavascript, SiMongodb, SiMysql, SiTailwindcss, SiNextdotjs, SiLangchain, SiOpenai, SiFastapi, SiPytorch, SiScikitlearn, SiSqlite, SiFirebase, SiReact, SiVite, SiGooglecloud, SiCloudinary, SiC, SiTensorflow, SiSpring, SiKubernetes, SiJenkins, SiRedis, SiPostman, SiWebrtc, SiPostgresql } from 'react-icons/si';
+import { SiTypescript, SiJavascript, SiMongodb, SiMysql, SiTailwindcss, SiOpenai, SiFastapi, SiScikitlearn, SiReact, SiVite, SiGooglecloud, SiCloudinary, SiC, SiSpring, SiKubernetes, SiJenkins, SiRedis, SiPostman, SiWebrtc, SiPostgresql } from 'react-icons/si';
 import { FaGears } from 'react-icons/fa6';
 
 interface SkillCategory {
@@ -26,40 +26,46 @@ const Skills = () => {
   // Skill categories with their respective skills
   const skillCategories: SkillCategory[] = [
     {
-      title: 'Frontend Development',
+      title: 'Frontend',
       icon: <FaReact className="text-3xl" />,
-      skills: ['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Material UI', 'React Native'],
+      skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Material UI'],
       color: 'from-blue-500/20 to-cyan-400/20',
     },
     {
-      title: 'Backend Development',
+      title: 'Backend & APIs',
       icon: <FaNodeJs className="text-3xl" />,
-      skills: ['Node.js', 'Springboot','Express','REST APIs', 'Fast API'],
+      skills: ['FastAPI', 'Node.js', 'Spring Boot', 'Microservices', 'REST APIs'],
       color: 'from-green-500/20 to-emerald-400/20',
     },
     {
-      title: 'Database',
+      title: 'Data & Caching',
       icon: <FaDatabase className="text-3xl" />,
-      skills: ['MongoDB', 'MySQL', 'AWS', 'PostgreSQL'],
+      skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Qdrant', 'FalkorDB'],
       color: 'from-amber-500/20 to-yellow-400/20',
     },
     {
-      title: 'Machine Learning',
+      title: 'AI Agents & ML',
       icon: <FaGears className="text-3xl" />,
-      skills: ['Regression', 'KNN', 'Decision Trees', 'Naive Bayes', 'SVM', 'Clustering', 'Scikit-Learn', 'LLMs'],
+      skills: ['RAG', 'Tool / Function Calling', 'Multi-turn Memory', 'LLM Integration', 'Prompt Engineering', 'Scikit-learn'],
       color: 'from-indigo-500/20 to-purple-400/20',
     },
     {
-      title: 'DevOps',
+      title: 'Voice, Cloud & Observability',
       icon: <FaNetworkWired className="text-3xl" />,
-      skills: ['Docker', 'Kubernetes', 'Jenkins', 'Github Actions', 'Vercel', 'Render'],
+      skills: ['LiveKit', 'WebRTC', 'SIP / PSTN', 'Twilio', 'Vobiz', 'Cartesia', 'Soniox', 'OpenAI Realtime', 'Deepgram', 'AWS', 'Grafana', 'Prometheus', 'Loki', 'OpenTelemetry', 'Langfuse', 'CloudWatch'],
       color: 'from-red-500/20 to-pink-400/20',
     },
     {
-      title: 'Tools & Libraries',
+      title: 'DevOps, Security & Platform',
       icon: <FaPalette className="text-3xl" />,
-      skills: ['VS Code','Figma','Jupyter Notebook','Cursor','IntelliJ', 'Canva', 'Git', 'GitHub'],
+      skills: ['Docker', 'Kubernetes', 'Terraform', 'Git', 'GitHub', 'GitHub Actions', 'CI/CD', 'AWS', 'Nginx', 'HIPAA', 'GDPR', 'SOC 2', 'ISO 27001', 'RBAC', 'Encryption', 'Audit Logging'],
       color: 'from-purple-500/20 to-violet-400/20',
+    },
+    {
+      title: 'Healthcare & RCM',
+      icon: <FaGears className="text-3xl" />,
+      skills: ['Medical Coding', 'ICD-10-AM', 'SBS / ACHI', 'AR-DRG', 'CDI', 'Condition Onset Flag', 'Revenue Cycle Management'],
+      color: 'from-rose-500/20 to-orange-400/20',
     },
   ];
 
@@ -98,8 +104,7 @@ const Skills = () => {
       </motion.h2>
 
       <p className="text-lightSlate max-w-3xl mb-12">
-        I've worked with a wide range of technologies. 
-        From designing user interfaces to developing robust systems, here's a snapshot of my technical expertise:
+        I work across the full lifecycle: designing interfaces, building backend and AI systems, containerizing services, provisioning cloud infrastructure, and automating secure delivery to production.
       </p>
 
       <motion.div 
@@ -268,4 +273,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;

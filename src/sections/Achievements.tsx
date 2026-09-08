@@ -20,28 +20,28 @@ const Achievements = () => {
     {
       id: 1,
       title: 'AIR 6009 in GATE 2025',
-      description: 'Secured an All India Rank of 6009 in GATE 2025 CS/IT Paper with an intense prepation of 10 days! proving my proficiency in this domain',
+      description: 'Ranked 6009 in the GATE CS 2025 paper after an intense 10-day preparation.',
       date: 'March 2025',
       icon: <FaRankingStar className="text-4xl text-yellow-500" />,
     },
     {
       id: 2,
       title: 'Hackathon Winner',
-      description: 'Secured First place in the Aadhya Hackathon 2.0 conducted at our campus.',
+      description: 'Won first place in a campus hackathon in 2025 and third place in 2024.',
       date: 'February 2025',
       icon: <FaMedal className="text-4xl text-amber-500" />,
     },
     {
       id: 3,
       title: 'SQL Basic and Advanced Certification - Hackerrank',
-      description: 'Secured First place in the Aadhya Hackathon 2.0 conducted at our campus.',
+      description: 'HackerRank SQL Basic and SQL Intermediate certificates.',
       date: 'February 2025',
       icon: <TbSql className="text-4xl text-amber-500" />,
     },
     {
       id: 4,
       title: 'Java Basic Certification - Hackerrank',
-      description: 'Secured First place in the Aadhya Hackathon 2.0 conducted at our campus.',
+      description: 'HackerRank Java Basic certificate.',
       date: 'February 2025',
       icon: <DiJava className="text-4xl text-amber-500" />,
     },
@@ -54,10 +54,17 @@ const Achievements = () => {
     },
     {
       id: 6,
-      title: 'Java Content Development',
-      description: 'Completed developing core java content for freshers that is being used in a company of my internship.',
-      date: 'December 2024',
+      title: '450+ DSA Problems Solved',
+      description: 'Solved more than 450 data structures and algorithms problems on LeetCode.',
+      date: 'Ongoing',
       icon: <FaAward className="text-4xl text-blue-500" />,
+    },
+    {
+      id: 7,
+      title: 'Java Content Development',
+      description: 'Developed core Java content for freshers that is used on a company website as part of an internship.',
+      date: '2024',
+      icon: <DiJava className="text-4xl text-blue-500" />,
     },
   ];
 
@@ -178,4 +185,4 @@ const Achievements = () => {
   );
 };
 
-export default Achievements; 
+export default Achievements;

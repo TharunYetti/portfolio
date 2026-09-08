@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedinIn, FaTwitter, FaEnvelope, FaPaperPlane, FaInstagram, FaCode, FaTerminal } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaPaperPlane, FaInstagram, FaCode, FaTerminal } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
 const Contact = () => {
   const contactEmail = 'tharunyetti24@gmail.com';
+  const formspreeEndpoint = (import.meta.env.VITE_FORMSPREE_ENDPOINT as string | undefined) || 'https://formspree.io/f/xeaqpzll';
   const socialLinks = [
     { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/TharunYetti' },
-    { name: 'LinkedIn', icon: <FaLinkedinIn />, url: 'https://linkedin.com/in/tharun-yetti-9775a0280/' },
+    { name: 'LinkedIn', icon: <FaLinkedinIn />, url: 'https://linkedin.com/in/tharun-yetti' },
     { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/tharun.3014/' },
     { name: 'Email', icon: <FaEnvelope />, url: `mailto:${contactEmail}` },
     { name: 'Leetcode', icon: <FaCode />, url: 'https://leetcode.com/u/TharunY' },
@@ -21,6 +22,7 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -30,29 +32,31 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    fetch("https://tharuny.app.n8n.cloud/webhook/form-submission", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject || `Message from ${formData.name}`,
-        message: formData.message
-      })
-    });
-    
-    toast.success("Thanks for Your Valuable Time!");
 
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
+    if (!formspreeEndpoint) {
+      window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(formData.subject || `Message from ${formData.name}`)}&body=${encodeURIComponent(`${formData.message}\n\nFrom: ${formData.name} (${formData.email})`)}`;
+      return;
+    }
+
+    setIsSending(true);
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, _subject: formData.subject || `Message from ${formData.name}` }),
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+
+      toast.success('Message sent. Thanks for reaching out!');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch {
+      toast.error('Could not send the message. Please email me directly.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -136,13 +140,16 @@ const Contact = () => {
                 className="w-full px-4 py-2 bg-lightNavy border border-slate/50 rounded-md focus:outline-none focus:border-secondary text-lightestSlate resize-none"
               />
             </div>
+
+            <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
             
             <button
               type="submit"
-              className="btn-primary w-full flex items-center justify-center gap-2 py-3"
+              disabled={isSending}
+              className="btn-primary w-full flex items-center justify-center gap-2 py-3 disabled:cursor-not-allowed disabled:opacity-60"
             >
               <FaPaperPlane />
-              Send Message
+              {isSending ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </motion.div>
@@ -159,8 +166,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-lightestSlate mb-6">Contact Information</h3>
             
             <p className="text-lightSlate mb-8">
-              I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
-              I'll do my best to get back to you as soon as possible!
+              I’m open to thoughtful conversations, product ideas, and opportunities to build useful software with good people.
             </p>
             
             <div className="mb-8">
@@ -175,12 +181,9 @@ const Contact = () => {
             
             <div>
               <p className="text-lg text-lightestSlate mb-4">Location:</p>
-              <p className="text-lightSlate">Chilamkur</p>
-              <p className="text-lightSlate">Yerraguntla</p>
-              <p className="text-lightSlate">Kadapa Dist.</p>
-              <p className="text-lightSlate">Andhra Pradesh</p>
-              <p className="text-lightSlate">Pincode - 516310</p>
-              <p className="text-lightSlate">India</p>
+              <p className="text-lightSlate">Hyderabad, Telangana</p>
+              <p className="text-lightSlate">500032, India</p>
+              <p className="text-lightSlate mt-2">Open to relocate</p>
             </div>
           </div>
           
@@ -210,4 +213,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

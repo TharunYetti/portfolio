@@ -20,9 +20,10 @@ const Navbar = () => {
 
   // Resume options
   const resumeOptions = [
-    { name: 'SDE Resume', file: '/resumes/TharunYetti.pdf' },
-    // { name: 'ML Resume', file: '/resumes/ml_resume.pdf' },
-    // { name: 'AI Resume', file: '/resumes/academic_resume.pdf' },
+    { name: 'Software Engineer Resume', file: 'resumes/Tharun_Yetti_Resume.pdf' },
+    { name: 'AI Engineer Resume', file: 'resumes/Tharun_Yetti_AI_Engineer.pdf' },
+    { name: 'Voice Engineer Resume', file: 'resumes/Tharun_Yetti_Voice_Engineer.pdf' },
+    { name: 'Medical Coding Resume', file: 'resumes/Tharun_Yetti_Medical_Coding.pdf' },
   ];
 
   // Toggle mobile menu

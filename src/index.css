@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,40 +12,45 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a192f;
-  color: #ccd6f6;
+  font-family: 'Manrope', sans-serif;
+  background-color: #f4f1eb;
+  color: #17202a;
+  line-height: 1.6;
 }
+
+a { text-decoration: none; }
+
+::selection { background: #ff6b4a; color: #fffaf3; }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a192f;
+  background: #17202a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #64ffda;
+  background: #ff6b4a;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4db9a4;
+  background: #d84d31;
 }
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-24;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-lightestSlate relative inline-block;
+    @apply text-3xl md:text-5xl font-extrabold mb-8 text-ink relative inline-block tracking-tight;
   }
   
   .section-title::after {
     content: '';
-    @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-secondary transition-all duration-300 ease-in-out;
+    @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-coral transition-all duration-300 ease-in-out;
   }
   
   .section-title:hover::after {
@@ -53,10 +58,10 @@ body {
   }
   
   .btn-primary {
-    @apply px-6 py-3 bg-transparent text-secondary border border-secondary rounded-md hover:bg-secondary/10 transition-all duration-300 font-medium;
+    @apply px-5 py-3 bg-transparent text-ink border border-ink/30 rounded-full hover:bg-ink hover:text-paper transition-all duration-300 font-semibold;
   }
   
   .btn-secondary {
-    @apply px-6 py-3 bg-secondary text-primary font-medium rounded-md hover:bg-secondary/80 transition-all duration-300;
+    @apply px-5 py-3 bg-coral text-white font-semibold rounded-full hover:bg-coral-dark transition-all duration-300;
   }
 }
