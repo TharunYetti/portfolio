@@ -14,7 +14,7 @@ const Hero = () => {
           >
             Software / AI / cloud infrastructure
           </motion.p>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const Hero = () => {
           >
             Tharun Yetti
           </motion.h1>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ const Hero = () => {
           >
             I build reliable systems and the infrastructure behind them.
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,14 +41,14 @@ const Hero = () => {
           >
             I’m Tharun, a software engineer and Member of Technical Staff at AmbitOS. I build AI agents, real-time voice systems, secure healthcare platforms, and production infrastructure across FastAPI, React, Docker, Terraform, and AWS.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className="btn-secondary inline-flex items-center gap-2 group"
             >
               Explore my work
@@ -67,18 +67,18 @@ const Hero = () => {
           <div className="relative">
             {/* Curved Background */}
             <div className="absolute inset-0 bg-coral rounded-full blur-3xl opacity-20"></div>
-            
+
             {/* Curved Border */}
             <div className="absolute -bottom-5 -right-5 w-full h-full border-2 border-coral rounded-full -z-10"></div>
-            
+
             {/* Image Container with Curved Shape */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-[10px] border-paper shadow-2xl">
-              <img 
-                src="images/image-1.jpg" 
-                alt="Profile" 
+              <img
+                src="images/TharunYetti.png"
+                alt="Profile"
                 className="w-full h-full object-cover"
               />
-              
+
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-tr from-ink/30 to-transparent"></div>
             </div>
@@ -100,14 +100,14 @@ const Hero = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block"
       >
         <a href="#about" className="text-coral">
-          <svg 
-            className="w-6 h-12" 
-            viewBox="0 0 24 44" 
-            fill="none" 
+          <svg
+            className="w-6 h-12"
+            viewBox="0 0 24 44"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path 
-              d="M13.0607 43.0607C12.4749 43.6464 11.5251 43.6464 10.9393 43.0607L1.3934 33.5147C0.807611 32.9289 0.807611 31.9792 1.3934 31.3934C1.97919 30.8076 2.92893 30.8076 3.51472 31.3934L12 39.8787L20.4853 31.3934C21.0711 30.8076 22.0208 30.8076 22.6066 31.3934C23.1924 31.9792 23.1924 32.9289 22.6066 33.5147L13.0607 43.0607ZM13.5 0V42H10.5V0H13.5Z" 
+            <path
+              d="M13.0607 43.0607C12.4749 43.6464 11.5251 43.6464 10.9393 43.0607L1.3934 33.5147C0.807611 32.9289 0.807611 31.9792 1.3934 31.3934C1.97919 30.8076 2.92893 30.8076 3.51472 31.3934L12 39.8787L20.4853 31.3934C21.0711 30.8076 22.0208 30.8076 22.6066 31.3934C23.1924 31.9792 23.1924 32.9289 22.6066 33.5147L13.0607 43.0607ZM13.5 0V42H10.5V0H13.5Z"
               fill="#ff6b4a"
             />
           </svg>
